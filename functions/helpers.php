@@ -1,7 +1,7 @@
 <?php
 
 //config
-define('BASE_URL', 'http://localhost/blog/');
+define('BASE_URL', 'https://therealvanyek.ml/blog/');
 
 function redirect($url) 
 {    
