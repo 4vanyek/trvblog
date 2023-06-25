@@ -61,10 +61,10 @@
                         <label for="title">Имя</label>
                         <input type="text" class="form-control" name="title" id="title" placeholder="Имя">
                     </section>
-                    <section class="form-group">
+                    <!--section class="form-group">
                         <label for="image">Изображение</label>
                         <input type="file" class="form-control" name="image" id="image">
-                    </section>
+                    </section-->
                     <section class="form-group">
                         <label for="cat_id">Категория</label>
                         <select class="form-control" name="cat_id" id="cat_id">
