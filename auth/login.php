@@ -41,7 +41,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>trv::blog</title>
-    <link rel="stylesheet" href="<?= asset('assets/css/bootstrap.min.css') ?>" media="all" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>" media="all" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -51,12 +52,13 @@ session_start();
 
         <section style="height: 100vh; background-color: #7c2ddb;" class="d-flex justify-content-center align-items-center">
             <section style="width: 20rem;">
+                <h2 class="text-center text-white m-4">Welcome back!</h2>
                 <h1 class="bg-light rounded-top px-3 mb-0 py-3 h5">trv::blog Login</h1>
                 <section class="bg-light my-0 px-2">
                 <small class="text-danger"><?php if ($error !== '') echo $error; ?></small>
 
                 </section>
-                <form class="p-3 pb-1 px-2 bg-white rounded-bottom" action="<?= url('auth/login.php') ?>" method="post">
+                <form class="pb-1 p-1 px-2 bg-white rounded-bottom" action="<?= url('auth/login.php') ?>" method="post">
                     <section class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
@@ -65,8 +67,8 @@ session_start();
                         <label for="password">Password</label>
                         <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                     </section>
-                    <section class="d-flex align-items-center justify-content-center">
-                        <button type="submit" class="btn btn-primary btn-block btn-lg">Login&nbsp;<i class="fa-solid fa-right-to-bracket"></i></button>
+                    <section class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary mt-2 mb-1 btn-lg">Login&nbsp;<i class="fa-solid fa-right-to-bracket"></i></button>
                         <!-- <a class="" href="<?= url('auth/register.php') ?>">Register</a> -->
                     </section>
                 </form>
