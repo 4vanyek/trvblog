@@ -1,11 +1,11 @@
-
+/*
 .bg-red{
     background-color: rgb(210, 0, 1);
     box-shadow: 0px 3px 4px #aaaaaa, 0px 4px 8px #ededed;
 }
 
 
-/*.nav-link{
+.nav-link{
     color: #111 !important;
 }
 .nav-link:hover{
@@ -13,7 +13,7 @@
 }
 .active > .nav-link{
     color: #555 !important;
-}*/
+}
 .bg-article{
     background-color: #dedede;
 }
@@ -22,16 +22,16 @@
     font-size: .8rem;
 }
 
-/*panel*/
+panel
 .sidebar{
     min-height: Calc(100vh - 3.5rem);
     background-color: #ededed;
     padding-top: 1rem;
 }
 
-/*.sidebar-link{
+.sidebar-link{
 
-}*/
+}
 .sidebar-link > a{
     text-decoration: none;
     display: block;
@@ -47,4 +47,4 @@
     border-left: 3px solid #9035ff;
     background-color: #ddd;
     transition: all .4s;
-}
+}*/

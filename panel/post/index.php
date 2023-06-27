@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>" media="all" type="text/css">
+    <link href="../dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
@@ -29,7 +30,7 @@
             <section class="col-md-10 pt-3">
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
-                    <h2 class="h4">Статьи</h2>
+                    <h2 class="fw-light">Статьи</h2>
                     <a href="<?= url('panel/post/create.php') ?>" class="btn px-3 btn-success">Создать&nbsp;&nbsp;<i class="fa-solid fa-plus"></i></a>
                 </section>
 
@@ -57,14 +58,14 @@
                             <tr>
                                 <td><?= $key += 1 ?></td>
                                 <td><img class="rounded-2" style="width: 90px;" src="<?= asset( $post->image) ?>"></td>
-                                <td><?= $post->title ?></td>
-                                <td><?= $post->category_name ?></td>
-                                <td><?= substr($post->body, 0, 30)  ?></td>
+                                <td class="fw-light"><?= $post->title ?></td>
+                                <td class="fw-light"><?= $post->category_name ?></td>
+                                <td class="fw-light"><?= substr($post->body, 0, 30)  ?></td>
                                 <td>
                                      <?php if($post->status == 10) { ?>
-                                     <span class="text-success">Активный</span>
+                                     <span class="text-success fw-light">Активный</span>
                                      <?php } else { ?>
-                                      <span class="text-danger">Неактивный</span>
+                                      <span class="text-danger fw-light">Неактивный</span>
                                       <?php } ?>
                                    </td>
                                 <td>
