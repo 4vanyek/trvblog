@@ -38,7 +38,7 @@
                     <a href="<?= url('category.php?cat_id=') . $post->cat_id ?>"><?= $post->category_name ?></a>
                     <span class="date-time"><?= $post->created_at ?></span>
                 </h6>
-                <article class="bg-secondary-subtle p-3 rounded-2"><img class="float-end mb-2 ml-2 rounded-2" style="width: 18rem;" src="<?= asset($post->image) ?>" alt=""><?= $post->body ?></article>
+                <article class="bg-secondary-subtle overflow-auto p-3 rounded-2"><img class="float-end rounded-2" style="width: 18rem;" src="<?= asset($post->image) ?>" alt=""><?= $post->body ?></article>
                 <?php
         } else{ ?>
             

@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP panel</title>
+    <title>trv::blog Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>" media="all" type="text/css">
@@ -30,52 +30,73 @@
             <section class="col-md-10 pt-3">
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
-                    <h2 class="fw-light">Статьи</h2>
-                    <a href="<?= url('panel/post/create.php') ?>" class="btn px-3 btn-success">Создать&nbsp;&nbsp;<i class="fa-solid fa-plus"></i></a>
+                    <h2 class="fw-light">Posts</h2>
+                    <a href="<?= url('panel/post/create.php') ?>" class="btn px-3 btn-success">Create a post&nbsp;&nbsp;<i class="fa-solid fa-plus"></i></a>
                 </section>
 
                 <section class="table-responsive">
+                    <form method="post" action="">
+                        <button type="submit" name="reverse_sort" class="btn btn-primary">Reverse Sort</button>
+                    </form>
                     <table class="table table-striped table-">
                         <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Изображение</th>
-                            <th>Имя</th>
-                            <th>Категория</th>
-                            <th>Тело</th>
-                            <th>Статус</th>
-                            <th>Настройка</th>
+                            <th>№</th>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Setting</th>
                         </tr>
                         </thead>
                         <tbody>
+<?php 
 
-                        <?php
-                        $query = "SELECT posts.*, categories.name AS category_name FROM posts LEFT JOIN categories ON posts.cat_id = categories.id;";
-                         $statement = $pdo->prepare($query);
-                         $statement->execute();
-                         $posts = $statement->fetchAll();
-                         foreach ($posts as $key => $post) { ?>
-                            <tr>
-                                <td><?= $key += 1 ?></td>
-                                <td><img class="rounded-2" style="width: 90px;" src="<?= asset( $post->image) ?>"></td>
-                                <td class="fw-light"><?= $post->title ?></td>
-                                <td class="fw-light"><?= $post->category_name ?></td>
-                                <td class="fw-light"><?= substr($post->body, 0, 30)  ?></td>
-                                <td>
-                                     <?php if($post->status == 10) { ?>
-                                     <span class="text-success fw-light">Активный</span>
-                                     <?php } else { ?>
-                                      <span class="text-danger fw-light">Неактивный</span>
-                                      <?php } ?>
-                                   </td>
-                                <td>
-                                    <a href="<?= url('panel/post/change-status.php?post_id=' . $post->id) ?>" class="btn btn-block btn-warning px-2">Изменить статус&nbsp;&nbsp;<i class="fa-solid fa-toggle-on"></i></a>
-                                    <a href="<?= url('panel/post/edit.php?post_id=' . $post->id) ?>" class="btn btn-block btn-info px-2">Редактировать&nbsp;&nbsp;<i class="fa-solid fa-pen"></i></a>
-                                    <a href="<?= url('panel/post/delete.php?post_id=' . $post->id) ?>" class="btn btn-block btn-danger px-2">Удалить&nbsp;&nbsp;<i class="fa-solid fa-trash"></i></a>
-                                </td>
-                            </tr>
-                            <?php } ?>
+if(isset($_POST['reverse_sort'])) {
+    if(isset($_SESSION['sort_order']) && $_SESSION['sort_order'] == 'DESC') {
+        $_SESSION['sort_order'] = 'ASC';
+    } else {
+        $_SESSION['sort_order'] = 'DESC';
+    }
+}
 
+if(isset($_SESSION['sort_order']) && $_SESSION['sort_order'] == 'DESC') {
+    $query = "SELECT posts.*, categories.name AS category_name FROM posts LEFT JOIN categories ON posts.cat_id = categories.id ORDER BY posts.id DESC;";
+} else {
+    $query = "SELECT posts.*, categories.name AS category_name FROM posts LEFT JOIN categories ON posts.cat_id = categories.id;";
+}
+
+$statement = $pdo->prepare($query);
+$statement->execute();
+$posts = $statement->fetchAll();
+
+$posts_count = count($posts); // Count the total posts for reverse numbering
+
+foreach ($posts as $key => $post) {
+    // Table rows
+    ?>
+    <tr>
+        <td><?= $posts_count - $key ?></td> <!-- Reverse numbering -->
+        <td><img class="rounded-2" style="width: 90px;" src="<?= asset( $post->image) ?>"></td>
+        <td class="fw-light"><?= $post->title ?></td>
+        <td class="fw-light"><?= isset($post->category_name) ? $post->category_name : '' ?></td>
+        <td>
+            <?php if($post->status == 10) { ?>
+                <span class="text-success fw-light">Active</span>
+            <?php } else { ?>
+                <span class="text-danger fw-light">Inactive</span>
+            <?php } ?>
+        </td>
+        <td>
+            <div class="btn-group">
+                <a href="<?= url('panel/post/change-status.php?post_id=' . $post->id) ?>" class="btn btn-block btn-warning px-2">Change status&nbsp;&nbsp;<i class="fa-solid fa-toggle-on"></i></a>
+                <a href="<?= url('panel/post/edit.php?post_id=' . $post->id) ?>" class="btn btn-block btn-info px-2">Edit&nbsp;&nbsp;<i class="fa-solid fa-pen"></i></a>
+                <a href="<?= url('panel/post/delete.php?post_id=' . $post->id) ?>" class="btn btn-block btn-danger px-2">Delete&nbsp;&nbsp;<i class="fa-solid fa-trash"></i></a>
+            </div>
+        </td>
+    </tr>
+    <?php }
+ ?>
 
                         </tbody>
                     </table>

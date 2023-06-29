@@ -82,28 +82,29 @@
         </div>
         <div class="offcanvas-body d-md-flex flex-column p-0 overflow-y-auto">
           <ul class="nav flex-column">
+          <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-2" href="<?= url('/') ?>">
+              <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </li>
+            <hr class="my-3">
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="<?= url('panel') ?>">
               <i class="fa-solid fa-gauge-high"></i>
-                Панель
+                Dashboard
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="<?= url('panel/post') ?>">
               <i class="fa-solid fa-table-list"></i>
-                Посты
+                Posts
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="<?= url('panel/category') ?>">
               <i class="fa-solid fa-tags"></i>
-                Категории
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="<?= url('auth/logout.php') ?>">
-                <i class="fa-solid fa-right-from-bracket"></i>
-                Выйти
+                Categories
               </a>
             </li>
           </ul>
@@ -112,54 +113,19 @@
 
           <ul class="nav flex-column mb-auto">
           <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="<?= url('/') ?>">
-              <i class="fa-solid fa-house"></i>
-                Главная
+              <a class="nav-link d-flex align-items-center gap-2" href="<?= url('auth/logout.php') ?>">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sign out
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="<?= url('panel/about') ?>">
               <i class="fa-solid fa-question"></i>
-              О панели
+              About
               </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-<!--nav id="sidebarMenu" class="d-lg-block sidebar bg-white">
-    <div class="position-sticky">
-      <div class="list-group list-group-flush mx-3 mt-4">
-        <a
-          href="<?= url('panel') ?>"
-          class="list-group-item list-group-item-action py-2 ripple"
-          aria-current="true">
-          <i class="fa-solid fa-gauge-high me-3"></i><span>Панель</span>
-        </a>
-        <a href="<?= url('panel/category') ?>" class="list-group-item list-group-item-action py-2 ripple">
-        <i class="fa-solid fa-tags me-3"></i><span>Категории</span>
-        </a>
-        <a href="<?= url('panel/post') ?>" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fa-solid fa-table-list me-3"></i><span>Посты</span></a>
-      </div>
-    </div>
-  </nav-->
-<!--section class="sidebar">
-    <section class="sidebar-link">
-        <a href="<?= url('panel') ?>">Панель</a>
-    </section>
-    <section class="sidebar-link">
-        <a href="<?= url('panel/category') ?>">Категории</a>
-    </section>
-    <section class="sidebar-link">
-        <a href="<?= url('panel/post') ?>">Посты</a>
-    </section>
-</section-->
 

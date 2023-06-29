@@ -40,7 +40,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>trv::blog</title>
+    <title>trv::blog Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>" media="all" type="text/css">
@@ -59,13 +59,13 @@ session_start();
 
                 </section>
                 <form class="pb-1 p-1 px-2 bg-white rounded-bottom" action="<?= url('auth/login.php') ?>" method="post">
-                    <section class="form-group">
-                        <label for="email">Email</label>
+                    <section class="form-floating mb-1">
                         <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                        <label for="email">Email address</label>
                     </section>
-                    <section class="form-group">
-                        <label for="password">Password</label>
+                    <section class="form-floating">
                         <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                        <label for="password">Password</label>
                     </section>
                     <section class="d-grid gap-2">
                         <button type="submit" class="btn btn-primary mt-2 mb-1 btn-lg">Login&nbsp;<i class="fa-solid fa-right-to-bracket"></i></button>

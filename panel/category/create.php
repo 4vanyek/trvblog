@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP panel</title>
+    <title>trv::blog Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>" media="all" type="text/css">
@@ -43,11 +43,11 @@
 
                     <form action="<?= url('panel/category/create.php') ?>" method="post">
                         <section class="form-group">
-                            <label for="name">Имя</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Имя категории">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="e.g. Design">
                         </section>
                         <section class="form-group">
-                            <button type="submit" class="btn btn-primary mt-2">Создать</button>
+                            <button type="submit" class="btn btn-primary mt-2">Create</button>
                         </section>
 
                     </form>

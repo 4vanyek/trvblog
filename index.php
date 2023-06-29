@@ -23,7 +23,7 @@
         <section class="row">
 
         <?php
-                        $query = "SELECT * FROM posts WHERE status = 10";
+                        $query = "SELECT * FROM posts WHERE status = 10 ORDER BY COALESCE(updated_at, created_at) DESC";
                          $statement = $pdo->prepare($query);
                          $statement->execute();
                          $posts = $statement->fetchAll();
@@ -31,7 +31,7 @@
            
                 <section class="col-md-4">
                     <section class="mb-2 overflow-hidden" style="max-height: 15rem;"><img class="img-fluid rounded-2" src="<?= asset($post->image) ?>" alt=""></section>
-                    <h2 class="h5 text-truncate"><?= $post->title ?></h2>
+                    <h4 class="text-truncate fw-light"><?= $post->title ?></h4>
                     <p><?= substr($post->body, 0, 80) ?></p>
                     <p><a class="btn btn-primary px-3" href="<?= url('detail.php?post_id=') . $post->id ?>" role="button">Читать дальше <i class="fa-solid fa-angles-right"></i></a></p>
                 </section>
