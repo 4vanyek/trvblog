@@ -12,7 +12,7 @@
 - изменение статуса поста (активный и неактивный)
 - создание, изменение и удаление категорий
 
-## Screenshots
+## скриншоты
 ![all posts screenshot](./assets/images/screenshots/Screenshot-Bit%20Blog%20all%20posts.png)
 
 ![bussines-category screenshot](./assets/images/screenshots/Screenshot-Bussines.png)
