@@ -13,16 +13,8 @@
 - создание, изменение и удаление категорий
 
 ## скриншоты
-![all posts screenshot](./assets/images/screenshots/Screenshot-Bit%20Blog%20all%20posts.png)
-
-![bussines-category screenshot](./assets/images/screenshots/Screenshot-Bussines.png)
-
-![marketing-category screenshot](./assets/images/screenshots/Screenshot-Marketing%20%26%20social%20media.png)
-
-![posts-panel screenshot](./assets/images/screenshots/Screenshot-posts.png)
-
-![categories-panel screenshot](./assets/images/screenshots/Screenshot-categories%20.png)
-
+![homepage](./assets/images/screenshots/Screenshot_17.png)
+![dashboard](./assets/images/screenshots/image.png)
 
 ## установка
 1. установите XAMPP
