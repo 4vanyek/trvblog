@@ -63,7 +63,7 @@ require_once '../../functions/auth.php';
                         <input type="text" class="form-control" name="name" id="name" value="<?= $category->name ?>">
                     </section>
                     <section class="form-group">
-                        <button type="submit" class="btn btn-primary mt-2">Edit</button>
+                        <button type="submit" class="btn btn-primary btn-sm mt-2">Edit</button>
                     </section>
                 </form>
 

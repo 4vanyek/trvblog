@@ -132,7 +132,7 @@
                             <textarea class="form-control" name="body" id="body" rows="5"><?= $post->body ?></textarea>
                         </section>
                         <section class="form-group">
-                            <button type="submit" class="btn btn-primary mt-2 mb-2">Update</button>
+                            <button type="submit" class="btn btn-primary btn-sm mt-2 mb-2">Update</button>
                         </section>
                     </form>
 

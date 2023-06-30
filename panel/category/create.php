@@ -47,7 +47,7 @@
                             <input type="text" class="form-control" name="name" id="name" placeholder="e.g. Design">
                         </section>
                         <section class="form-group">
-                            <button type="submit" class="btn btn-primary mt-2">Create</button>
+                            <button type="submit" class="btn btn-primary btn-sm mt-2">Create</button>
                         </section>
 
                     </form>

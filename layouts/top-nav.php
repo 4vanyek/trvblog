@@ -3,7 +3,10 @@ session_start();
 ?>
 <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark sticky-top" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand fw-light" href="<?= url('') ?>">trv::blog</a>
+        <a class="navbar-brand fw-light" href="<?= url('') ?>">
+          <img src="https://tinypic.host/images/2023/06/29/TRV_favicon.png" width="32" height="32" class="d-inline-block align-text-top">
+          ::blog
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,8 +14,8 @@ session_start();
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="<?= url('index.php') ?>">Главная <span class="sr-only ">(current)</span></a>
+                    
                 </li>
-
                 <?php 
                 $query = "SELECT * FROM categories;";
                 $statement = $pdo->prepare($query);
@@ -24,12 +27,14 @@ session_start();
                     <a class="nav-link " href="<?= url('category.php?cat_id=') . $category->id ?>"><?= $category->name ?></a>
                 </li>
             </ul>
+        </div>
             <?php } ?>
 
             <?php 
             if (!isset($_SESSION['user'])) {
                     ?>
             <!-- <a class="text-decoration-none px-2 " href="<?= url('auth/register.php') ?>">Register</a> -->
+            
             <div class="dropdown">
   <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
     Sign in

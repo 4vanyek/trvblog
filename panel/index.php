@@ -44,7 +44,7 @@
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <a class="btn btn-primary" href="<?= url('/') ?>" role="button"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Go to Homepage</a>
+        <a class="btn btn-primary btn-sm" href="<?= url('/') ?>" role="button"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Go to Homepage</a>
       </div>
     </div>
   </div>
@@ -57,10 +57,10 @@
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
       <div class="btn-group">
-                        <a class="btn btn-primary" href="<?= url('panel/post/create.php') ?>" role="button">
+                        <a class="btn btn-primary btn-sm" href="<?= url('panel/post/create.php') ?>" role="button">
                             <i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Create a post
                         </a>
-                        <a class="btn btn-outline-primary" href="<?= url('panel/post/') ?>" role="button">
+                        <a class="btn btn-outline-primary btn-sm" href="<?= url('panel/post/') ?>" role="button">
                         <i class="fa-solid fa-table-list"></i>&nbsp;&nbsp;View all posts
                         </a>
                         </div>
@@ -76,9 +76,9 @@
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
       <div class="btn-group">
-      <a class="btn btn-primary" href="<?= url('panel/category/create.php') ?>" role="button">
+      <a class="btn btn-primary btn-sm" href="<?= url('panel/category/create.php') ?>" role="button">
         <i class="fa-solid fa-folder-plus"></i>&nbsp;&nbsp;Create a category</a>
-      <a class="btn btn-outline-primary" href="<?= url('panel/category/') ?>" role="button">
+      <a class="btn btn-outline-primary btn-sm" href="<?= url('panel/category/') ?>" role="button">
         <i class="fa-solid fa-tags"></i>&nbsp;&nbsp;View all categories</a>
       </div>
     </div>
@@ -92,7 +92,7 @@
     </h2>
     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <a class="btn btn-primary" href="<?= url('../phpmyadmin') ?>" role="button">
+        <a class="btn btn-primary btn-sm" href="<?= url('../phpmyadmin') ?>" role="button">
             <i class="fa-brands fa-php"></i>&nbsp;&nbsp;Go to phpMyAdmin
             </a>
       </div>
@@ -106,7 +106,7 @@
     </h2>
     <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <a class="btn btn-primary" href="<?= url('auth/logout.php') ?>" role="button">
+        <a class="btn btn-primary btn-sm" href="<?= url('auth/logout.php') ?>" role="button">
             <i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;Sign out
             </a>
       </div>

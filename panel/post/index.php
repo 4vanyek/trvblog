@@ -31,12 +31,12 @@
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
                     <h2 class="fw-light">Posts</h2>
-                    <a href="<?= url('panel/post/create.php') ?>" class="btn px-3 btn-success">Create a post&nbsp;&nbsp;<i class="fa-solid fa-plus"></i></a>
+                    <a href="<?= url('panel/post/create.php') ?>" class="btn btn-sm px-3 btn-success">Create a post&nbsp;&nbsp;<i class="fa-solid fa-plus"></i></a>
                 </section>
 
                 <section class="table-responsive">
                     <form method="post" action="">
-                        <button type="submit" name="reverse_sort" class="btn btn-primary">Reverse Sort</button>
+                        <button type="submit" name="reverse_sort" class="btn btn-primary btn-sm">Reverse Sort</button>
                     </form>
                     <table class="table table-striped table-">
                         <thead>
@@ -89,9 +89,9 @@ foreach ($posts as $key => $post) {
         </td>
         <td>
             <div class="btn-group">
-                <a href="<?= url('panel/post/change-status.php?post_id=' . $post->id) ?>" class="btn btn-block btn-warning px-2">Change status&nbsp;&nbsp;<i class="fa-solid fa-toggle-on"></i></a>
-                <a href="<?= url('panel/post/edit.php?post_id=' . $post->id) ?>" class="btn btn-block btn-info px-2">Edit&nbsp;&nbsp;<i class="fa-solid fa-pen"></i></a>
-                <a href="<?= url('panel/post/delete.php?post_id=' . $post->id) ?>" class="btn btn-block btn-danger px-2">Delete&nbsp;&nbsp;<i class="fa-solid fa-trash"></i></a>
+                <a href="<?= url('panel/post/change-status.php?post_id=' . $post->id) ?>" class="btn btn-sm btn-block btn-warning px-2">Change status&nbsp;&nbsp;<i class="fa-solid fa-toggle-on"></i></a>
+                <a href="<?= url('panel/post/edit.php?post_id=' . $post->id) ?>" class="btn btn-sm btn-block btn-info px-2">Edit&nbsp;&nbsp;<i class="fa-solid fa-pen"></i></a>
+                <a href="<?= url('panel/post/delete.php?post_id=' . $post->id) ?>" class="btn btn-sm btn-block btn-danger px-2">Delete&nbsp;&nbsp;<i class="fa-solid fa-trash"></i></a>
             </div>
         </td>
     </tr>

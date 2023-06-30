@@ -30,7 +30,7 @@
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
                     <h2 class="fw-light">Categories</h2>
-                    <a href="<?= url('panel/category/create.php'); ?>" class="btn px-3 btn-success">Create a category&nbsp;&nbsp;<i class="fa-solid fa-folder-plus"></i></a>
+                    <a href="<?= url('panel/category/create.php'); ?>" class="btn btn-sm px-3 btn-success">Create a category&nbsp;&nbsp;<i class="fa-solid fa-folder-plus"></i></a>
                 </section>
 
                 <section class="table-responsive">
@@ -58,8 +58,8 @@
                                 <td> <?= $category->name ?> </td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="<?= url('panel/category/edit.php?cat_id=' . $category->id) ?>" class="btn btn-info px-3">Edit&nbsp;&nbsp;<i class="fa-solid fa-pen"></i></a>
-                                        <a href="<?= url('panel/category/delete.php?cat_id=' . $category->id) ?>" class="btn btn-danger px-3">Delete&nbsp;&nbsp;<i class="fa-solid fa-trash"></i></a>
+                                        <a href="<?= url('panel/category/edit.php?cat_id=' . $category->id) ?>" class="btn btn-sm btn-info px-3">Edit&nbsp;&nbsp;<i class="fa-solid fa-pen"></i></a>
+                                        <a href="<?= url('panel/category/delete.php?cat_id=' . $category->id) ?>" class="btn btn-sm btn-danger px-3">Delete&nbsp;&nbsp;<i class="fa-solid fa-trash"></i></a>
                                     </div>
                                 </td>
                             </tr>
