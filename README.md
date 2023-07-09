@@ -1,3 +1,6 @@
+<h1 align=center>Внимание</h1>
+<p align=center><i>Этот блог больше не разрабатывается, так что все DevLog'и будут выходить здесь: https://trv.bearblog.dev/</i></p>
+
 # trv::blog
 лёгкий PHP блог
 
